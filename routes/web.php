@@ -5,8 +5,9 @@ use Core\Facades\Log;
 use Core\Facades\Mail;
 use Core\Facades\Route;
 
-Route::get('/', fn () => 'Hello from your Koavel');
-Route::get('/home', [HomeController::class, 'index']);
+// Route::get('/', fn () => view('home', ['name' => 'Tiburce']));
+// Route::get('/', fn () => view('home', ['name' => 'Tiburce']));
+Route::get('/', [HomeController::class, 'index']);
 Route::get("/log", function () {
     Log::info("Good Luck in your Way !");
 });

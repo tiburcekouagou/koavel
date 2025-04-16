@@ -71,7 +71,8 @@ class Router {
             echo $action();
         } elseif (is_array($action)) {
             [$controller, $method] = $action;
-            (new $controller)->$method();
+            // (new $controller)->$method();
+            app($controller)->$method();
         } else {
             throw new \Exception("The route cannot be dispatched");
         }
