@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\HomeController;
+use Core\Facades\Route;
 
-$router->get('/', fn () => 'Hello from your Koavel');
-$router->get('/home', [HomeController::class, 'index']);
+Route::get('/', fn () => 'Hello from your Koavel');
+Route::get('/home', [HomeController::class, 'index']);

@@ -1,15 +1,9 @@
 <?php
 
-use Core\Router;
+use Core\App;
 
 require __DIR__ . "/../vendor/autoload.php";
 
 
-// Instance the router
-$router = new Router();
-
-// Load the routes file
-require __DIR__ . "/../routes/web.php";
-
-// Handle the request
-$router->dispatch($_SERVER['REQUEST_URI']);
+$app = new App();
+$app->boot();
