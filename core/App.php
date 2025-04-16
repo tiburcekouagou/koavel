@@ -2,6 +2,9 @@
 
 namespace Core;
 
+use Core\Services\Logger;
+use Core\Services\Mailer;
+
 class App extends Container
 {
     public Router $router;
@@ -12,6 +15,8 @@ class App extends Container
         $this->router = $this->make(Router::class);
         self::$instance = $this;
 
+        $this->singleton(Logger::class, fn () => new Logger());
+        $this->singleton(Mailer::class, fn () => new Mailer());
     }
 
     public function boot()
