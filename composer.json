@@ -1,0 +1,19 @@
+{
+    "name": "tiburcekouagou/koavel",
+    "description": "A PHP mvc laravel like framework",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tiburce Kouagou",
+            "email": "kouagoutiburce@gmail.com"
+        }
+    ],
+    "require": {}
+}
